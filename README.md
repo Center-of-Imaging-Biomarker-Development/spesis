@@ -31,12 +31,12 @@ To run this Docker image on a CPU, you will need:
 * At least 6GB of RAM
 * GNU/Linux [[supported distributions]](https://docs.docker.com/engine/install/#server) or Windows 10/11 with WSL [[supported versions]](https://docs.docker.com/desktop/windows/install/)
 * Docker >= 19.03 
-* AssemblyNet Docker image 
+* SPeSiS Docker image 
 * MRI files in nifti format
 
 ## Installation 
 
-Docker may be installed on supported versions of [GNU/Linux](https://github.com/volBrain/AssemblyNet/blob/main/README.md#installation-on-gnulinux) or [Windows 10/11 with WSL](https://github.com/volBrain/AssemblyNet/blob/main/README.md#installation-on-windows-1011-with-wsl). The docker image can also be transformed in a [Singularity image](https://github.com/volBrain/AssemblyNet/blob/main/README.md#singularity-image)
+Docker may be installed on supported versions of [GNU/Linux] or [Windows 10/11 with WSL]. The docker image can also be transformed in a [Singularity image]
 
 ### Installation on GNU/Linux
 
