@@ -104,3 +104,35 @@ You may upgrade the system:
 sudo apt-get update
 sudo apt-get upgrade
 ```
+
+
+# How to use SPeSiS 
+
+## Inputs
+
+This Docker image requires 3D T2-weighted images in nifti format (.nii or .nii.gz) as inputs.
+
+To convert your DICOM files into nifti format, you can use [dcm2niix](https://github.com/rordenlab/dcm2niix), a multiplatform and open source software.
+
+## Outputs
+
+For each processed image, the following files will be produced and stored separately in folder named *filename* (where *filename* is replaced by the original filename):
+
+* *filename*.nii.gz: Native image corrected for N4 inhomogeneity 
+* *filename*_mask.nii.gz: Segmentation maps of the peri-sinus space structures
+* *filename*_lobe.nii.gz: Mask defining sub-region of the peri-sinus space (i.e., prefrontal, frontal, parietal and occipital)
+* report_*filename*.pdf: PDF format volumetry report. The reports will show the expected limits/normative bounds of normalized volumes in function of age, if age and optionally sex were specified.
+* *filename*_metrics.csv: CSV format volumetry report
+
+## Command options
+
+The Docker image has the following arguments: 
+```
+[--name_pattern `<filename/pattern>`] [--overwrite True/False (default=False]
+```
+
+* `<filename/pattern>`: Filter filename with specific pattern in the input directory.
+*`<overwrite>`: Allow to replace already existing processing output.
+
+
+
