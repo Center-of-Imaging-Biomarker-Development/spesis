@@ -132,7 +132,7 @@ The Docker image has the following arguments:
 ```
 
 * `<filename/pattern>`: Filter filename with specific pattern in the input directory.
-*`<overwrite>`: Allow to replace already existing processing output.
+* `<overwrite>`: Allow to replace already existing processing output.
 
 
 
