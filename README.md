@@ -2,11 +2,15 @@
 
 Segmentation tools for the quantification of peri-sinus space using non-invasive MRI
 
+
+**This Docker image is to be used only for non-commercial and non-medical purposes (research only).** See [license](https://github.com/hettk/spesis/blob/main/README.md#license).
+
+
 ## Quick Start Instructions
-If you have already installed Docker, you can get the kilianhett/spesis:latest image from Docker Hub repository:
+If you have already installed Docker, you can get the kilianhett/spesis:1.0.0 image from Docker Hub repository:
 
 ```
-sudo docker pull kilianhett/spesis:latest
+sudo docker pull kilianhett/spesis:1.0.0
 ```
 
 Choroid plexus segmentation software currently only supports CPU
