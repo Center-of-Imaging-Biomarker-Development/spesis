@@ -22,3 +22,85 @@ sudo docker run -v /absolute_path_to_folder/:/data/in  -v /absolute_path_to_fold
 See Installation instructions for detailed instructions on how to install all the dependencies.
 See How to use SPeSiS for detailed instructions on how to use SPeSiS.
 
+# Installation instructions 
+
+## Prerequisites
+
+To run this Docker image on a CPU, you will need:
+* a x86_64 CPU 
+* At least 6GB of RAM
+* GNU/Linux [[supported distributions]](https://docs.docker.com/engine/install/#server) or Windows 10/11 with WSL [[supported versions]](https://docs.docker.com/desktop/windows/install/)
+* Docker >= 19.03 
+* AssemblyNet Docker image 
+* MRI files in nifti format
+
+## Installation 
+
+Docker may be installed on supported versions of [GNU/Linux](https://github.com/volBrain/AssemblyNet/blob/main/README.md#installation-on-gnulinux) or [Windows 10/11 with WSL](https://github.com/volBrain/AssemblyNet/blob/main/README.md#installation-on-windows-1011-with-wsl). The docker image can also be transformed in a [Singularity image](https://github.com/volBrain/AssemblyNet/blob/main/README.md#singularity-image)
+
+### Installation on GNU/Linux
+
+Here are the detailed installation instructions on Ubuntu (18.04 or above).
+
+#### Docker 
+
+Install Docker from the official repository [[instructions]](https://docs.docker.com/engine/install/ubuntu/).  
+(Docker no longer releases updated packages for Ubuntu 16.04)
+```
+#Uninstall old versions of docker
+sudo apt-get remove docker docker-engine docker.io containerd runc
+#Install using the official repository
+sudo apt-get update
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+#Verify that Docker Engine is installed correctly
+sudo docker run hello-world
+# it may download the hello-world docker image and then print "Hello from Docker!" and other information.
+```
+
+
+### Installation on Windows 10/11 with WSL
+
+Here are the detailled installation instructions on Windows 10 or 11.
+
+#### Check Windows version
+
+You need:
+* Windows 10 64-bit: Home or Pro 2004 (build 19041) or higher, or Enterprise or Education 1909 (build 18363) or higher.
+* Windows 11 64-bit: Home or Pro version 21H2 or higher, or Enterprise or Education version 21H2 or higher.
+
+To check your Windows version and build number, select Windows logo key + R, type winver, select OK. 
+You can update to the latest Windows version by selecting Start > Settings > Windows Update > Check for updates.
+
+#### Enable BIOS virtualization support
+
+BIOS-level hardware virtualization support must be enabled.
+
+You can check the Performance tab on the Task Manager to see if virtualization is enabled, see [virtualization support](https://docs.docker.com/desktop/windows/troubleshoot/#virtualization-must-be-enabled).
+
+#### WSL2
+
+Install Windows Subsystem for Linux (WSL) 2 [[instructions]](https://docs.microsoft.com/en-us/windows/wsl/install)
+
+Open PowerShell as Administrator (Start menu > PowerShell > right-click > Run as Administrator) and enter this command:
+```
+wsl --install
+```
+It should install the last Ubuntu LTS. You may need to reboot your machine.
+
+You can check that WSL version 2 was installed:
+Open PowerShell as Administrator (Start menu > PowerShell > right-click > Run as Administrator) and enter this command:
+```
+wsl -l -v
+```
+
+Launch Ubuntu (Start menu > ubuntu). It should ask to create a default user. 
+You may upgrade the system: 
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
