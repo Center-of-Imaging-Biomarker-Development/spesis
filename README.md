@@ -16,7 +16,7 @@ sudo docker pull kilianhett/spesis:1.0.0
 Choroid plexus segmentation software currently only supports CPU
 
 ```
-sudo docker run -v /absolute_path_to_folder/:/data/in  -v /absolute_path_to_folder/:/data/out kilianhett/spesis --name_pattern <name_of_image>
+sudo docker run -v /absolute_path_to_folder/:/data/in  -v /absolute_path_to_folder/:/data/out kilianhett/spesis:1.0.0 --name_pattern <name_of_image>
 ```
 
 See Installation instructions for detailed instructions on how to install all the dependencies.
