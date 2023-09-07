@@ -68,7 +68,7 @@ sudo docker run hello-world
 
 #### Installation on Windows 10/11 with WSL
 
-Here are the detailled installation instructions on Windows 10 or 11.
+Here are the detailed installation instructions on Windows 10 or 11.
 
 ##### Check Windows version
 
@@ -123,8 +123,8 @@ For each processed image, the following files will be produced and stored separa
 
 * *filename*.nii.gz: Native image corrected for N4 inhomogeneity 
 * *filename*_mask.nii.gz: Segmentation maps of the peri-sinus space structures
-* *filename*_lobe.nii.gz: Mask defining sub-region of the peri-sinus space (i.e., prefrontal, frontal, parietal and occipital)
-* report_*filename*.pdf: PDF format volumetry report. The reports will show the expected limits/normative bounds of normalized volumes in function of age, if age and optionally sex were specified.
+* *filename*_lobe.nii.gz: Mask defining sub-region of the peri-sinus space (i.e., prefrontal, frontal, parietal, and occipital)
+* report_*filename*.pdf: PDF format volumetry report. The reports will show the expected limits/normative bounds of normalized volumes in the function of age, if age and optionally sex were specified.
 * *filename*_metrics.csv: CSV format volumetry report
 
 ## Command options
@@ -134,7 +134,7 @@ The Docker image has the following arguments:
 [--name_pattern `<filename/pattern>`] [--overwrite True/False (default=False]
 ```
 
-* `<filename/pattern>`: Filter filename with specific pattern in the input directory.
+* `<filename/pattern>`: Filter the filenames with a specific pattern in the input directory.
 * `<overwrite>`: Allow to replace already existing processing output.
 
 
