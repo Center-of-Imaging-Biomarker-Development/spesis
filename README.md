@@ -13,7 +13,7 @@ If you have already installed Docker, you can get the kilianhett/spesis:1.0.0 im
 sudo docker pull kilianhett/spesis:1.0.0
 ```
 
-Choroid plexus segmentation software currently only supports CPU
+The software for the segmentation of the peri-sinus space currently only supports CPU
 
 ```
 sudo docker run -v /absolute_path_to_folder/:/data/in  -v /absolute_path_to_folder/:/data/out kilianhett/spesis:1.0.0 --name_pattern <name_of_image>
