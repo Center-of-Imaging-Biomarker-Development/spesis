@@ -2,6 +2,10 @@
 
 Segmentation tools for the quantification of peri-sinus space using non-invasive MRI
 
+If you use this software for scientific publications, please cite the associated manuscript.
+
+Hett, K., McKnight, C. D., Leguizamon, M., Lindsey, J. S., Eisma, J. J., Elenberger, J., ... & Donahue, M. J. (2024). Deep learning segmentation of peri-sinus structures from structural magnetic resonance imaging: validation and normative ranges across the adult lifespan. Fluids and Barriers of the CNS, 21(1), 1-15. [https://doi.org/10.1186/s12987-024-00516-w](https://doi.org/10.1186/s12987-024-00516-w)
+
 
 **This Docker image is to be used only for non-commercial and non-medical purposes (research only).** See [license](https://github.com/hettk/spesis/blob/main/README.md#license).
 
